@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+  }
+div{
+    padding: 5px;
+    width: auto;
+    height: auto;
+}
+.container-fluid{
+    margin: 5px -5px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    min-height: 50px;
+}
+.container{
+    margin: 5px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    min-height: 50px;
+}
+.row{
+    margin: 0 -5px;
+    min-height: 50px;
+    padding: auto;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.column{
+    float: left;
+    display: block;
+    padding: 5px;
+    margin: 0 10px;
+}
+.sm{
+    width: 23.1%;
+}
+.md{
+    width: 30%;
+}
+.lg{
+    width: 50%;
+}
+.logo{
+    width: 30%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+.nav{
+    width: 40%;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 15px;
+    float: right;
+}
+.icon{
+    width: auto;
+    height: auto;
+    margin: 5px;
+}
+.column-2{
+    width: 16.0%;
+    float: left;
+    margin: 5px;
+}
+.column-8{
+    width: 60.0%;
+    float: left;
+    margin: 5px;
+}
+.card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+  }
+
+  @media  screen and (max-width: 600px){
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .md, .lg{
+          width: 100%;
+      }
+      .logo{
+          width: 50%;
+      }
+      .nav{
+          display: none;
+      }
+  }
+
+.social{
+    background-color: black;
+    color: rgb(221, 221, 22);
+    border-radius: 25px 25px;
+    padding: 5px;
+    border: 3px solid yellow;
+    margin: 2px;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(221, 221, 22);
+  }

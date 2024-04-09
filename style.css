@@ -1,0 +1,195 @@
+div {
+    margin: 10px;
+    height: auto;
+    padding: 10px;
+}
+#container{
+    background-color: rgb(221, 221, 22);
+    width: auto;
+    height: 70px;
+    margin: 15px;
+}
+nav#headerlinks{
+    float: right;
+}
+ul#links li{
+    display: inline;
+}
+ul#links li a{
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+.bold{
+  font-weight: bold;
+  font-size: 36px;
+}
+.brand{
+    width: 20%;
+    float: left;
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.close{
+    display: none;
+}
+
+.banner{
+  width: auto;
+  height: 300px;
+  background-color: rgb(15, 15, 14);
+  background-image: url("banner.jpg");
+  background-repeat: no-repeat;
+}
+.tab{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 40%;
+  height: 50%;
+  background-color: rgba(15, 15, 14, 0.6);
+  border-radius: 8px 8px;
+}
+.center{
+  margin: auto;
+  width: 50%;
+
+}
+.btn{
+  background-color: rgb(221, 221, 22);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px 8px;
+}
+
+
+@media screen and (max-width: 600px) {
+    ul#links li a {display: none;}
+    ul#links li a.close {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    #container .responsive nav#headerlinks ul#links li {position: relative;}
+    #container .responsive nav#headerlinks ul#links li a.close {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    #container .responsive nav#headerlinks ul#links li a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+  }
+  
+.icon{
+    width: auto;
+    height: auto;
+    margin: 5px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 23.2%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .md{
+      width: 31.5%;
+  }
+  .lg{
+      width: 48.1%;
+  }
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .md, .lg{
+        width: 100%;
+    }
+    .brand{
+      width: 40%;
+      float: left;
+      color: white;
+      font-size: 1.3em;
+      margin: 0;
+      padding-left: 10px;
+    }
+    .tab{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5%;
+      width: 60%;
+      height: 50%;
+      background-color: rgba(15, 15, 14, 0.6);
+      border-radius: 8px 8px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+  }
+  .card-2 {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4);
+    padding: 16px;
+    color: white;
+    text-align: center;
+    background-color:rgba(65, 59, 59, 0.8);
+  }
+
+  .card-2 h3{
+    color: rgb(221, 221, 22);
+  }
+  .input-block{
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 7px;
+  }
+  .social{
+      background-color: black;
+      color: rgb(221, 221, 22);
+      border-radius: 25px 25px;
+      padding: 5px;
+      border: 3px solid yellow;
+      margin: 2px;
+  }
+  footer{
+    background-color: rgb(221, 221, 22);
+  }

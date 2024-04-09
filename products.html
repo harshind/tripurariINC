@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>products | Tripurari INC</title>
+    <script>
+        function generateProductCard(product){
+            var str = ` <div class="column sm">
+                            <div class="card">
+                                <div class="icon">
+                                    <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                                </div>
+                                <h3 >` + product.title + `</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                                <div class="row">
+                                    <button id="` + product.pid +`" onclick="view(this.id)">View</button>
+                                    <button id="` + product.pid +`" onclick="addToCart(this.id)">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>`
+            return str
+        }
+        document.addEventListener("DOMContentLoaded",()=>{
+            var products = JSON.parse(localStorage.getItem("products"));
+            if(products.length === 0){
+                document.getElementById("container").innerHTML="<h1>Nothing to display</h1>";
+            }else{
+                var col =""
+                for( let i =0; i < products.length; i= i+4){
+                    for(let j =i; j < i+4; j= j+1){
+                        col =col + generateProductCard(products[j]);
+                    }
+                    var row = '<div class="row" style="padding-bottom: 10px;margin-bottom: 10px;">';
+                        col = row+ col
+                }
+                
+                document.getElementById("container").innerHTML = col;
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: rgb(221, 221, 22);"">
+            <div class="column logo">Tripurari INC</div>
+            <div class="column nav" style="float: right;">
+                <a href="cart.html">CART</a>
+                <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="#" onclick="logOut()"><i class="fa fa-user"></i> LOGOUT</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+            <div class="row" style="padding-bottom: 10px;margin-bottom: 10px;">
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3 >Product-1</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button onclick="view(this.id)">View</button>
+                            <button onclick="addToCart(this.id)">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 2</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 3</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 4</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-bottom: 10px;margin-bottom: 10px;">
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 2</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 3</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 4</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-bottom: 10px;margin-bottom: 10px;">
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 2</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 3</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column sm">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                        </div>
+                        <h3>Card 4</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, quos!</p>
+                        <div class="row">
+                            <button>View</button>
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>              
+        </div>
+    </section>
+    <section>
+        <footer class="container">
+            <div class="row" id="contact" style="text-align: center;">
+                <span class="social"><i class="fa fa-user"></i> </span>
+                <span class="social"><i class="fa fa-user"></i> </span>
+                <span class="social"><i class="fa fa-user"></i> </span>
+                <span class="social"><i class="fa fa-user"></i> </span>
+                <span><a href="#banner"><button class="social" style="font-size: 20px; padding: 0 8px;">^</button></a></span>
+            </div>
+        </footer>
+    </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

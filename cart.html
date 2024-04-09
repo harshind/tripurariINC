@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Cart | Tripurari INC</title>
+    <script>
+        function generateList(product){
+            var str = ` <div class="row">
+                            <div class="column-2">
+                                <div class="icon">
+                                    <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                                </div>
+                            </div>
+                            <div class="column-8">
+                                <h3 >` + product.title + `</h3>
+                            </div>
+                            <div class="column-2">
+                                <button id="` + product.pid +`" onclick="remove(this.id)">Remove</button>
+                            </div>
+                        </div>`
+            return str;
+        }
+        document.addEventListener("DOMContentLoaded",()=>{
+            var html =""
+            var cart = JSON.parse(localStorage.getItem("cart"));
+            if(cart.length === 0){
+                document.getElementById("container").innerHTML="<h1>Nothing to display</h1>"
+            }else{
+                for( let i =0; i < cart.length; i= i+1){
+                    html = html + generateList(cart[i])
+                }
+                document.getElementById("container").innerHTML = html;
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: rgb(221, 221, 22);">
+            <div class="column logo">Tripurari INC</div>
+            <div class="column nav" style="float: right;">
+                <a href="#" onclick="logOut()"><i class="fa fa-user"></i> LOGOUT</a>
+                <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="products.html">PRODUCT</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+    </div>
+        <div class="footer">
+            <span class="social"><i class="fa fa-user"></i> </span>
+            <span class="social"><i class="fa fa-user"></i> </span>
+            <span class="social"><i class="fa fa-user"></i> </span>
+            <span class="social"><i class="fa fa-user"></i> </span>
+            <span><a href="#banner"><button class="social" style="font-size: 20px; padding: 0 8px;">^</button></a></span>
+        </div>
+        
+    <script src="index.js"></script>
+</body>
+</html>

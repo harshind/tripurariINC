@@ -1,0 +1,14 @@
+userName: dummy@accenture.com
+password: 12345678
+
+INSTRUCTION
+1. Start by opening index.html(Home page)
+2. Click on Login button to visit login page.
+3. On successful login, you will be directed to products page.
+4. Click on view button to get the detailed description of product.
+5. You can add product to your cart at products page or at product description page.
+6. In top nav bar, you'll have the option to Logout.
+7. On logging out, you'll be brought to Home page.
+8. From products and product Desc page you can directly visit cart.
+9. In order to remove product from cart, click on remove button on carts page.
+10.Thank you for reading till End. Write it back with suggested improvements. 

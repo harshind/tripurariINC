@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product-desc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tripurari | Product Description</title>
+    <script>
+        function generateDesc(product){
+            var str = `<div class="column md">
+                <div class="card">
+                    <div class="icon">
+                        <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                    </div>
+                </div>
+            </div>
+            <div class="column lg" style="float: right;">
+                <div class="card">
+                    <div class="row">
+                        <h3>`+ product.title + `</h3>
+                    <p> `+ product.desc + 
+                    `</p>
+                        <button id="` + product.pid +`" onclick="addToCart(this.id)">Add To Cart</button>
+                    </div>
+                </div>
+            </div>`
+            return str
+        }
+        document.addEventListener("DOMContentLoaded",()=>{
+            var product_desc = JSON.parse(localStorage.getItem("product-desc"));
+            if(product_desc == undefined ){
+                document.getElementById("container").innerHTML="<h1>Nothing to display</h1>";
+            }else{
+               
+                document.getElementById("container").innerHTML = generateDesc(product_desc);
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: rgb(221, 221, 22);">
+            <div class="column logo">Tripurari INC</div>
+            <div class="column nav" style="float: right;">
+                <a href="#" onclick="logOut()"><i class="fa fa-user"></i> LOGOUT</a>
+                <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="products.html">PRODUCT</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="column md">
+                <div class="card">
+                    <div class="icon">
+                        <img src="../New folder/img-2.jpg" alt="" srcset="" width="100%" height="30%">
+                    </div>
+                </div>
+            </div>
+            <div class="column lg" style="float: right;">
+                <div class="card">
+                    <div class="row">
+                        <h3>Card 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, soluta. Repellat, nobis similique! 
+                        Quisquam, at ex illo vel asperiores mollitia porro possimus error architecto deserunt consectetur,
+                         obcaecati omnis ab facere dolorem voluptatem tenetur? Quia qui excepturi accusantium dicta. Architecto,
+                          facere. In officia, a error placeat nemo itaque voluptas nulla. Obcaecati eius, similique impedit 
+                          adipisci voluptatibus inventore perspiciatis excepturi culpa voluptatum assumenda ratione ipsam! Non 
+                          tempore totam culpa, obcaecati suscipit perspiciatis unde quae veniam, architecto expedita nam tempora 
+                          eum ducimus voluptatum, repellat dolor error numquam recusandae et. 
+                        Ut, iste libero quia amet mollitia doloremque ullam doloribus quas laborum maxime similique natus.
+                    </p>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+    </div>
+    <div class="footer">
+        <span class="social"><i class="fa fa-user"></i> </span>
+        <span class="social"><i class="fa fa-user"></i> </span>
+        <span class="social"><i class="fa fa-user"></i> </span>
+        <span class="social"><i class="fa fa-user"></i> </span>
+        <span><a href="#banner"><button class="social" style="font-size: 20px; padding: 0 8px;">^</button></a></span>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
