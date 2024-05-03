@@ -44,7 +44,7 @@ ul#links li a{
   width: auto;
   height: 300px;
   background-color: rgb(15, 15, 14);
-  background-image: url("banner.jpg");
+  background-image: url("../tripurariInc/banner.jpg");
   background-repeat: no-repeat;
 }
 .tab{
